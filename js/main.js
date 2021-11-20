@@ -11,14 +11,8 @@ function checkScroll() {
 
   if (pageYOffset !== 0) {
     color.classList.add("changeColor");
-    for (let i = 0; i < 2; i++) {
-      change.children[i].classList.add("changefontColor");
-    }
   } else {
     color.classList.remove("changeColor");
-    for (let i = 0; i < 2; i++) {
-      change.children[i].classList.remove("changefontColor");
-    }
   }
 }
 
@@ -36,7 +30,7 @@ const photo = document.getElementsByClassName("photo-image");
 
 //index.html에 select box에 onchang=함수명()_이벤트 발생 시 함수 호출
 function selectBox() {
-  for (let j = 0; j < 3; j++) {
+  for (let j = 0; j < 19; j++) {
     if (
       country[country.selectedIndex].dataset.value === photo[j].dataset.value
     ) {

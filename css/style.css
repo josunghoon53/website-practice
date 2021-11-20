@@ -9,6 +9,22 @@ body {
   background-color: rgb(243, 243, 243);
 }
 
+a {
+  all: unset;
+}
+
+a:link {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+a:visited {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+a:hover {
+  cursor: pointer;
+}
+
 /*기본적으로 웹브라우저에서 1rem은 16px
   부모의 크기가 지정되면 상대적으로 변경됨*/
 
@@ -45,7 +61,7 @@ header {
   margin-left: 0.6rem;
 }
 
-.instagram-icon {
+.head-logo .instagram-icon {
   font-size: 1.5rem;
   color: #e0e0e0;
   margin-right: 0.6rem;
