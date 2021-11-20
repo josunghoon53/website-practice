@@ -1,0 +1,239 @@
+/*box-sizing을 border-box로 함으로써 테두리를 포함해 컨텐츠 크기를 조정한다 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  background-color: rgb(243, 243, 243);
+}
+
+/*기본적으로 웹브라우저에서 1rem은 16px
+  부모의 크기가 지정되면 상대적으로 변경됨*/
+
+.inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.head-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-homepage {
+  font-family: "Open Sans", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-left: 0.6rem;
+}
+
+.instagram-icon {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin-right: 0.6rem;
+}
+
+.main {
+  background-image: url(./images/camera_photo.jpg);
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+/*배경이 투명색이면 글자도 자동으로 투명하게 바뀜 
+  문제해결 방법_ rgb값 마지막에 투명도값 넣기*/
+
+.main-container {
+  background-color: rgb(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.title-container {
+  padding-top: 190px;
+  padding-bottom: 200px;
+}
+
+.title {
+  text-align: center;
+  color: #fff;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+}
+
+.photo-container {
+  margin-top: 100px;
+  width: 100%;
+  height: 900px;
+}
+
+.photo-title-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.photo-title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: rgb(14, 14, 14);
+  margin-left: 0.6rem;
+}
+
+.country-box {
+  margin-left: 1rem;
+}
+
+select {
+  width: 120px;
+  height: 43px;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: rgb(95, 95, 95);
+  background-image: url(./images/arrow-down.png);
+  background-repeat: no-repeat;
+  background-size: 0.8rem;
+  background-position: right;
+  background-position-x: 5.5rem;
+  padding-right: 1.3rem;
+  border-color: rgb(223, 223, 223);
+}
+
+.photo-list {
+  display: flex;
+  list-style: none;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.photocard {
+  height: 100%;
+  margin: 0 10px;
+}
+
+.photo-display {
+  display: block;
+}
+
+.image-wrapper {
+  width: 300px;
+  height: 300px;
+  border: 3px dashed #888;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photocard-container {
+  width: 200px;
+  margin: 1rem 0;
+}
+
+.photocard-date-container {
+  display: flex;
+  align-items: center;
+}
+
+.photocard-icon {
+  margin-right: 0.5rem;
+  color: rgb(71, 71, 71);
+  order: 1;
+}
+
+.photocard-date {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(97, 97, 97);
+  order: 2;
+}
+
+.photocard-title {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+footer {
+  border-top: 1px solid;
+  width: 100%;
+  height: 30px;
+  margin-top: auto;
+  padding: 2rem 0;
+  bottom: 0;
+  background-color: rgb(243, 243, 243);
+  border-color: rgb(219, 219, 219);
+}
+
+.footer-message {
+  padding-bottom: 1rem;
+  color: rgb(65, 65, 65);
+  text-align: center;
+}
+
+.footer-email {
+  font-weight: 300;
+  color: rgb(65, 65, 65);
+  text-align: center;
+}
+
+.footer-copyright {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-weight: 300;
+  color: rgb(65, 65, 65);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.changeColor {
+  background-color: rgb(255, 255, 255, 255);
+}
+
+.changefontColor {
+  color: black;
+}
+
+/*브라우저에서만 적용_700px이하일때 title 글씨크기 줄이기*/
+@media only screen and (max-width: 700px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .inner {
+    max-width: 1200px;
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>웹사이트 연습</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!--css reset-->
+    <link rel="stylesheet" href="css/nomalize.css" />
+    <!--------------------폰트관련-------------------------->
+    <!-- Spoca Han Sans Neo: https://spoqa.github.io/spoqa-han-sans/ko-KR/ -->
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--오픈산스-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--아이콘 사용-->
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="inner">
+        <div class="head-container" id="fontcolor">
+          <div class="head-homepage">Home</div>
+          <i class="fab fa-instagram instagram-icon"></i>
+        </div>
+      </div>
+    </header>
+    <!--메인 이미지 적용-->
+    <section class="main">
+      <div class="main-container">
+        <div class="inner">
+          <div class="title-container">
+            <div class="title">I am Traveler</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--카테고리-->
+    <section>
+      <div class="inner">
+        <div class="photo-container">
+          <div class="photo-title-container">
+            <div class="photo-title">Photos</div>
+            <form class="country-box">
+              <select name="country" id="country" onchange="selectBox()">
+                <option value="Ecuador" data-value="10" selected>
+                  에콰도르
+                </option>
+                <option value="Peru" data-value="20">페루</option>
+                <option value="Bolivia" data-value="30">볼리비아</option>
+              </select>
+            </form>
+          </div>
+          <ui class="photo-list">
+            <li class="photocard">
+              <div class="image-wrapper">
+                <img
+                  src="./css/images/2019_12_05_04_11_IMG_2229.JPG"
+                  class="photo-image"
+                  data-value="10"
+                />
+              </div>
+              <div class="photocard-container">
+                <div class="photocard-date-container">
+                  <div class="photocard-date">12/31/2019</div>
+                  <i class="far fa-images photocard-icon"></i>
+                </div>
+                <div class="photocard-title">
+                  에콰도르, 바뇨스 세상의 끝 그네 (CASA DEL ARBOL)
+                </div>
+              </div>
+            </li>
+            <li class="photocard" style="display: none">
+              <div class="image-wrapper">
+                <img
+                  src="./css/images/2019_12_31_14_35_IMG_2230.JPG"
+                  class="photo-image"
+                  data-value="30"
+                />
+              </div>
+              <div class="photocard-container">
+                <div class="photocard-date-container">
+                  <div class="photocard-date">12/31/2019</div>
+                  <i class="far fa-images photocard-icon"></i>
+                </div>
+                <div class="photocard-title">
+                  에콰도르, 바뇨스 세상의 끝 그네 (CASA DEL ARBOL)
+                </div>
+              </div>
+            </li>
+            <li class="photocard" style="display: none">
+              <div class="image-wrapper">
+                <img
+                  src="./css/images/2020_06_20_02_25_IMG_2231.JPG"
+                  class="photo-image"
+                  data-value="30"
+                />
+              </div>
+              <div class="photocard-container">
+                <div class="photocard-date-container">
+                  <div class="photocard-date">12/31/2019</div>
+                  <i class="far fa-images photocard-icon"></i>
+                </div>
+                <div class="photocard-title">
+                  에콰도르, 바뇨스 세상의 끝 그네 (CASA DEL ARBOL)
+                </div>
+              </div>
+            </li>
+          </ui>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="inner">
+        <div class="footer-message">
+          여행을 좋아하고 사진찍는 걸 좋아하는 여행자입니다
+        </div>
+        <div class="footer-email">contact : josunghoon53@naver.com</div>
+        <div class="footer-copyright">
+          Copyright 2021 © All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
