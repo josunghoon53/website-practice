@@ -40,11 +40,16 @@ let select_length = 4;
 //index.html에 select box에 onchang=함수명()_이벤트 발생 시 함수 호출
 function selectBox() {
   select_length = 0;
+  activeLi = 0;
 
-  for (let j = 0; j < 19; j++) {
-    if (
-      country[country.selectedIndex].dataset.value === photo[j].dataset.value
-    ) {
+  //selectBox의 값이 바뀌면 x의 위치 처음으로 바꾸기
+  slides.style.transition = "transform 0s";
+  slides.style.transform = "translateX(" + 0 + "px)";
+  slides.setAttribute("data-position", activeLi);
+
+  let selectNum = country[country.selectedIndex].dataset.value;
+  for (let j = 0; j < 16; j++) {
+    if (selectNum === photo[j].dataset.value) {
       select_length++;
       photo[j].parentElement.parentElement.style.display = "block";
     } else {
@@ -74,7 +79,6 @@ right.addEventListener("click", function () {
 left.addEventListener("click", function () {
   if (Number(activeLi) < 0) {
     activeLi = Number(activeLi) + 385;
-
     slides.style.transition = "transform 1s";
     slides.style.transform = "translateX(" + String(activeLi) + "px)";
     slides.setAttribute("data-position", activeLi);
