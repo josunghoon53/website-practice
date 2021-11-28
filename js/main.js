@@ -35,7 +35,7 @@ const country = document.getElementById("country");
 const photo = document.getElementsByClassName("photo-image");
 
 //표시되는 사진 카테고리별 길이파악<초기값은 셀렉트박스 첫번째 목록 길이로>
-let select_length = 5;
+let select_length = 4;
 
 //index.html에 select box에 onchang=함수명()_이벤트 발생 시 함수 호출
 function selectBox() {
