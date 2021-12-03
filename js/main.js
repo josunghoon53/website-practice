@@ -43,7 +43,7 @@ function selectBox() {
 
   for (let i = 0; i < 3; i++) {
     if (selectedCode.selectedIndex === Number(country[i].dataset.value)) {
-      country[i].style.display = "block";
+      country[i].style.display = "flex";
     } else {
       country[i].style.display = "none";
     }
@@ -51,15 +51,16 @@ function selectBox() {
 
   //select 카테고리에 맞는 사진 재배치.
   currentIdx = 0;
-  setLayout();
+  setSlide();
 }
 
 /*--------------반응형 슬라이드----------------*/
 const slides = document.querySelector(".slide-wrap");
-const slide_margin = 30;
+const slide_margin = 10;
 const right = document.querySelector(".right");
 const left = document.querySelector(".left");
-let moveWidth = 420;
+const control = document.querySelector(".control");
+let moveWidth = 426;
 
 //resize 될 때마다 크기 조정
 window.onresize = function () {
@@ -79,115 +80,54 @@ function resizeSlider() {
   slidesWidth = slides.offsetWidth - slide_margin * (display - 1);
   sliderItemWidth = slidesWidth / display;
   moveWidth = sliderItemWidth + slide_margin;
+  length = country[index].childElementCount;
 
   let items = document.querySelectorAll(".box-sub");
   for (var i = 0; i < items.length; i++) {
     items[i].style.width = sliderItemWidth + "px";
-    items[i].style.height = sliderItemWidth * 1.25 + "px";
+    items[i].style.height = sliderItemWidth * 1.35 + "px";
   }
 
-  setLayout();
-}
-
-function setLayout() {
-  for (let j = 0; j < country[index].childElementCount; j++) {
-    country[index].children[j].style.left = (j + currentIdx) * moveWidth + "px";
-    country[index].children[j].classList.remove("transition");
+  country[index].classList.remove("transition");
+  country[index].style.left = currentIdx * moveWidth + "px";
+  control.style.bottom = moveWidth / 1.2 + "px";
+  //2개였다가 3개로 변하는 시점 슬라이드 재배치
+  if (currentIdx == 2 - length && display == 3) {
+    country[index].style.left = (currentIdx + 1) * moveWidth + "px";
+    currentIdx += 1;
   }
 }
 
-/*새로고침 했을 때 반응형 반영한 슬라이드 크기 구현&&
-  레이아웃 생성*/
-
+//새로고침 했을 때 반응형 반영한 슬라이드 크기 구현 &&
+//레이아웃 생성
 resizeSlider();
-setLayout();
 
-function moveSlide() {
-  for (let l = 0; l < country[index].childElementCount; l++) {
-    country[index].children[l].style.left = (l + currentIdx) * moveWidth + "px";
-    country[index].children[l].classList.add("transition");
-  }
+//슬라이드 좌우버튼 누를 시 슬라이드 위치 조정
+function setSlide() {
+  country[index].style.left = currentIdx * moveWidth + "px";
+  country[index].classList.add("transition");
 }
 
 left.addEventListener("click", function () {
   if (display - country[index].childElementCount !== currentIdx) {
     currentIdx -= 1;
-    moveSlide();
+    setSlide();
   }
 });
-
 right.addEventListener("click", function () {
   if (currentIdx !== 0) {
     currentIdx += 1;
-    moveSlide();
+    setSlide();
   }
 });
 
-/*
-const slides = document.querySelector(".container");
-let activeLi = slides.getAttribute("data-position");
-const country = document.getElementById("country");
-const photo = document.getElementsByClassName("photo-image");
+/*-----------------이미지 클릭시 크게보기-------------------*/
 
-//표시되는 사진 카테고리별 길이파악<초기값은 셀렉트박스 첫번째 목록 길이로>
-let select_length = 4;
-
-//index.html에 select box에 onchang=함수명()_이벤트 발생 시 함수 호출
-function selectBox() {
-  select_length = 0;
-  activeLi = 0;
-
-  //selectBox의 값이 바뀌면 x의 위치 처음으로 바꾸기
-  slides.style.transition = "transform 0s";
-  slides.style.transform = "translateX(" + 0 + "px)";
-  slides.setAttribute("data-position", activeLi);
-
-  let selectNum = country[country.selectedIndex].dataset.value;
-  for (let j = 0; j < 16; j++) {
-    if (selectNum === photo[j].dataset.value) {
-      select_length++;
-      photo[j].parentElement.parentElement.style.display = "block";
-    } else {
-      photo[j].parentElement.parentElement.style.display = "none";
-    }
-  }
-}
-
-/*------------------------------------------------------------------*/
-/*
-
-const slide = document.querySelectorAll(".container li");
-const right = document.querySelector(".right");
-const left = document.querySelector(".left");
-const slideCount = slide.length;
-
-right.addEventListener("click", function () {
-  if (slides.clientWidth < select_length * 385 + Number(activeLi)) {
-    if ((3 - select_length) * 385 !== activeLi) {
-      activeLi = Number(activeLi) - 385;
-      slides.style.transition = "transform 1s";
-      slides.style.transform = "translateX(" + String(activeLi) + "px)";
-      slides.setAttribute("data-position", activeLi);
-    }
-  }
-});
-
-left.addEventListener("click", function () {
-  if (Number(activeLi) < 0) {
-    activeLi = Number(activeLi) + 385;
-    slides.style.transition = "transform 1s";
-    slides.style.transform = "translateX(" + String(activeLi) + "px)";
-    slides.setAttribute("data-position", activeLi);
-  }
-});
-
-/*------------------------------------------------------*/
-
-/*
 const temp = document.querySelector(".overlayPhoto");
+const all_imgbox = document.querySelectorAll(".box-sub");
 
-for (let k = 0; k < slideCount; k++) {
-  slide[k].addEventListener("click", function (e) {
+for (let k = 0; k < all_imgbox.length; k++) {
+  all_imgbox[k].addEventListener("click", function (e) {
     const output = e.target;
     temp.children[0].src = output.currentSrc;
 
@@ -205,4 +145,3 @@ for (let k = 0; k < slideCount; k++) {
     });
   });
 }
-*/

@@ -31,7 +31,7 @@ a:hover {
 .inner {
   max-width: 1300px;
   height: 100%;
-  padding: 0 35px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -55,12 +55,13 @@ header {
 
 .head-homepage {
   font-family: "Open Sans", sans-serif;
-  font-size: large;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .head-logo {
-  font-size: 1.5rem;
+  font-size: 33px;
+  margin-top: 2px;
 }
 
 .main {
@@ -97,7 +98,7 @@ header {
 
 .photo-container {
   position: relative;
-  margin-top: 100px;
+  margin-top: 60px;
   width: 100%;
   height: 900px;
 }
@@ -111,7 +112,7 @@ header {
 
 .photo-title {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.7rem;
+  font-size: 2.3rem;
   font-weight: bolder;
   letter-spacing: 2px;
   color: rgb(14, 14, 14);
@@ -141,7 +142,7 @@ select {
   display: flex;
   position: relative;
   padding: 0 30px;
-  bottom: -200px;
+  bottom: 315px;
   justify-content: space-between;
 }
 .left {
@@ -172,9 +173,6 @@ select {
   margin: 0 auto;
 }
 
-.slide-wrap {
-}
-
 /*ui*/
 .country {
   list-style: none;
@@ -183,8 +181,10 @@ select {
 
 /*li*/
 .box {
-  margin-right: 25px;
-  position: absolute;
+  margin-right: 10px;
+}
+.box:hover {
+  cursor: pointer;
 }
 
 .transition {
@@ -193,8 +193,8 @@ select {
 
 /*image-wrapper*/
 .box-sub {
-  width: 390px;
-  height: 494px;
+  width: 416px;
+  height: 560px;
 }
 
 .box-sub img {
@@ -233,9 +233,13 @@ select {
 .overlayPhoto img {
   max-height: 600px;
 }
+.overlayPhoto img:hover {
+  cursor: pointer;
+}
 
 .photocard-container {
   margin-top: 10px;
+  margin-left: 8px;
   display: flex;
 }
 
@@ -255,7 +259,7 @@ select {
 }
 
 .photocard-title {
-  margin-left: 10px;
+  margin-left: 4px;
 }
 
 footer {
@@ -298,5 +302,34 @@ footer {
 @media only screen and (max-width: 700px) {
   .title {
     font-size: 4rem;
+  }
+}
+
+/*모바일 적용*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .photocard-container {
+    font-size: 10px;
+    flex-direction: column;
+  }
+  .photocard-title {
+    line-height: 20px;
+  }
+  .photo-container {
+    margin-top: 30px;
+  }
+  select {
+    width: 110px;
+    height: 34px;
+  }
+  .photo-title {
+    font-size: 25px;
+  }
+
+  .container-wrap {
+    margin-top: -10px;
+  }
+  .control {
+    padding: 0 11px;
+    bottom: 171px;
   }
 }
