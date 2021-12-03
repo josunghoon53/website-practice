@@ -71,7 +71,7 @@
           <div class="photo-title-container">
             <div class="photo-title">Photos</div>
             <form class="country-box">
-              <select name="country" id="country" onchange="selectBox()">
+              <select name="" id="selectCountry" onchange="selectBox()">
                 <option value="Ecuador" data-value="10" selected>
                   에콰도르
                 </option>
@@ -81,278 +81,233 @@
             </form>
           </div>
           <div class="container-wrap">
-            <ui class="container" data-position="0">
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/에콰도르1.jpg"
-                    class="photo-image"
-                    data-value="10"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+            <div class="slide-wrap">
+              <!--에콰도르-->
+              <ui class="country" data-value="0" style="display: block">
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/에콰도르1.jpg" class="photo-image" />
                   </div>
-                  <div class="photocard-title">에콰도르, 갈라파고스섬</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/에콰도르2.jpg"
-                    class="photo-image"
-                    data-value="10"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">에콰도르, 갈라파고스섬</div>
                   </div>
-                  <div class="photocard-title">에콰도르, 적도박물관</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/에콰도르3.jpg"
-                    class="photo-image"
-                    data-value="10"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/에콰도르2.jpg" class="photo-image" />
                   </div>
-                  <div class="photocard-title">에콰도르, 갈라파고스섬</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/에콰도르4.jpg"
-                    class="photo-image"
-                    data-value="10"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">에콰도르, 적도박물관</div>
                   </div>
-                  <div class="photocard-title">에콰도르, 스노쿨링중</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/페루2.jpg"
-                    class="photo-image"
-                    data-value="20"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/에콰도르3.jpg" class="photo-image" />
                   </div>
-                  <div class="photocard-title">페루, 마추픽추 앞에서</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/페루3.jpg"
-                    class="photo-image"
-                    data-value="20"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">에콰도르, 갈라파고스섬</div>
                   </div>
-                  <div class="photocard-title">페루, 69호수 정상에서</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/페루4.jpg"
-                    class="photo-image"
-                    data-value="20"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/에콰도르4.jpg" class="photo-image" />
                   </div>
-                  <div class="photocard-title">페루, 쿠스코도심</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/페루5.jpg"
-                    class="photo-image"
-                    data-value="20"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">에콰도르, 스노쿨링중</div>
                   </div>
-                  <div class="photocard-title">페루, 비니쿤카</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/페루6.jpg"
-                    class="photo-image"
-                    data-value="20"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                </li>
+              </ui>
+              <!--페루-->
+              <ui class="country" data-value="1" style="display: none">
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/페루2.jpg" class="photo-image" />
                   </div>
-                  <div class="photocard-title">페루, 69호수</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/페루7.jpg"
-                    class="photo-image"
-                    data-value="20"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">페루, 마추픽추 앞에서</div>
                   </div>
-                  <div class="photocard-title">페루, 와카치나 버기투어</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/페루8.jpg"
-                    class="photo-image"
-                    data-value="20"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img
+                      src="./css/images/페루3.jpg"
+                      class="photo-image"
+                      data-value="20"
+                    />
                   </div>
-                  <div class="photocard-title">페루, 와카치나</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/볼리비아1.jpg"
-                    class="photo-image"
-                    data-value="30"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">페루, 69호수 정상에서</div>
                   </div>
-                  <div class="photocard-title">볼리비아, 우유니투어중</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/볼리비아2.jpg"
-                    class="photo-image"
-                    data-value="30"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/페루4.jpg" class="photo-image" />
                   </div>
-                  <div class="photocard-title">볼리비아, 우유니투어중</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/볼리비아3.jpg"
-                    class="photo-image"
-                    data-value="30"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">페루, 쿠스코도심</div>
                   </div>
-                  <div class="photocard-title">볼리비아, 우유니투어중</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/볼리비아4.jpg"
-                    class="photo-image"
-                    data-value="30"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/페루5.jpg" class="photo-image" />
                   </div>
-                  <div class="photocard-title">볼리비아, 우유니투어중</div>
-                </div>
-              </li>
-              <li class="box">
-                <div class="box-sub">
-                  <img
-                    src="./css/images/볼리비아5.jpg"
-                    class="photo-image"
-                    data-value="30"
-                  />
-                </div>
-                <div class="photocard-container">
-                  <div class="photocard-date-container">
-                    <div class="photocard-date">12/16/2019</div>
-                    <i class="far fa-images photocard-icon"></i>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">페루, 비니쿤카</div>
                   </div>
-                  <div class="photocard-title">볼리비아, 우유니투어중</div>
-                </div>
-              </li>
-            </ui>
-          </div>
-          <div class="control">
-            <div class="left">
-              <img class="images" src="./css/images/left.png" alt="" class="" />
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/페루6.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">페루, 69호수</div>
+                  </div>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/페루7.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">페루, 와카치나 버기투어</div>
+                  </div>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/페루8.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">페루, 와카치나</div>
+                  </div>
+                </li>
+              </ui>
+              <!--볼리비아-->
+              <ui class="country" data-value="2" style="display: none">
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/볼리비아1.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">볼리비아, 우유니투어중</div>
+                  </div>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/볼리비아2.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">볼리비아, 우유니투어중</div>
+                  </div>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/볼리비아3.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">볼리비아, 우유니투어중</div>
+                  </div>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/볼리비아4.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">볼리비아, 우유니투어중</div>
+                  </div>
+                </li>
+                <li class="box">
+                  <div class="box-sub">
+                    <img src="./css/images/볼리비아5.jpg" class="photo-image" />
+                  </div>
+                  <div class="photocard-container">
+                    <div class="photocard-date-container">
+                      <div class="photocard-date">12/16/2019</div>
+                      <i class="far fa-images photocard-icon"></i>
+                    </div>
+                    <div class="photocard-title">볼리비아, 우유니투어중</div>
+                  </div>
+                </li>
+              </ui>
             </div>
-            <div class="right">
-              <img
-                class="images"
-                src="./css/images/right.png"
-                alt=""
-                class=""
-              />
+            <div class="control">
+              <div class="left">
+                <img
+                  class="images"
+                  src="./css/images/left.png"
+                  alt=""
+                  class=""
+                />
+              </div>
+              <div class="right">
+                <img
+                  class="images"
+                  src="./css/images/right.png"
+                  alt=""
+                  class=""
+                />
+              </div>
             </div>
           </div>
+          <!--이미지 클릭시 원본이미지로 보여주기-->
           <div id="overlay">
             <div class="overlayPhoto"><img src="" alt="" class="" /></div>
           </div>

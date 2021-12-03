@@ -6,7 +6,7 @@
 body {
   margin: 0 auto;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
-  background-color: rgb(243, 243, 243);
+  background-color: #e0e0e0;
 }
 
 a {
@@ -29,9 +29,9 @@ a:hover {
   부모의 크기가 지정되면 상대적으로 변경됨*/
 
 .inner {
-  width: 100%;
+  max-width: 1300px;
   height: 100%;
-  padding: 0 2rem;
+  padding: 0 35px;
   margin: 0 auto;
 }
 
@@ -57,12 +57,10 @@ header {
   font-family: "Open Sans", sans-serif;
   font-size: large;
   font-weight: bold;
-  margin-left: 0.6rem;
 }
 
 .head-logo {
   font-size: 1.5rem;
-  margin-right: 0.6rem;
 }
 
 .main {
@@ -117,7 +115,6 @@ header {
   font-weight: bolder;
   letter-spacing: 2px;
   color: rgb(14, 14, 14);
-  margin-left: 0.6rem;
 }
 
 .country-box {
@@ -140,23 +137,24 @@ select {
   border-color: rgb(223, 223, 223);
 }
 
+.control {
+  display: flex;
+  position: relative;
+  padding: 0 30px;
+  bottom: -200px;
+  justify-content: space-between;
+}
 .left {
-  position: absolute;
   width: 30px;
   height: 30px;
-  left: 23px;
-  top: 300px;
 }
 
 .left:hover {
   cursor: pointer;
 }
 .right {
-  position: absolute;
   width: 30px;
   height: 30px;
-  top: 300px;
-  left: 1092px;
 }
 .right:hover {
   cursor: pointer;
@@ -166,6 +164,44 @@ select {
   height: 100%;
   color: #e0e0e0;
   object-fit: cover;
+}
+
+.container-wrap {
+  height: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slide-wrap {
+}
+
+/*ui*/
+.country {
+  list-style: none;
+  position: relative;
+}
+
+/*li*/
+.box {
+  margin-right: 25px;
+  position: absolute;
+}
+
+.transition {
+  transition: left 1s ease-out;
+}
+
+/*image-wrapper*/
+.box-sub {
+  width: 390px;
+  height: 494px;
+}
+
+.box-sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(85%);
 }
 
 #overlay {
@@ -222,39 +258,10 @@ select {
   margin-left: 10px;
 }
 
-.container-wrap {
-  width: 1125px;
-  height: 700px;
-  margin-left: 9.6px;
-  overflow: hidden;
-}
-.container {
-  list-style: none;
-  display: flex;
-  position: relative;
-  left: 0;
-}
-
-.box:not(:last-child) {
-  margin-right: 30px;
-}
-
-.box-sub {
-  width: 355px;
-  height: 500px;
-}
-
-.box-sub img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(85%);
-}
-
 footer {
   border-top: 1px solid;
   width: 100%;
-  height: 30px;
+  height: 164px;
   margin-top: auto;
   padding: 2rem 0;
   bottom: 0;
@@ -291,11 +298,5 @@ footer {
 @media only screen and (max-width: 700px) {
   .title {
     font-size: 4rem;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .inner {
-    max-width: 1200px;
   }
 }

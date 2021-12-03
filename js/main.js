@@ -28,7 +28,102 @@ ChildNode 와 Children, firstChild와 firstElementChild 차이는
 후자의 경우 element node만을 반환한다.
 */
 
-/*-----------------------------------------------------------------*/
+/*------------------selectBox--------------------*/
+
+const country = document.querySelectorAll(".country");
+const selectedCode = document.getElementById("selectCountry");
+
+//selected_default값
+let index = selectedCode.selectedIndex;
+let currentIdx = 0;
+
+function selectBox() {
+  //select값 재할당
+  index = selectedCode.selectedIndex;
+
+  for (let i = 0; i < 3; i++) {
+    if (selectedCode.selectedIndex === Number(country[i].dataset.value)) {
+      country[i].style.display = "block";
+    } else {
+      country[i].style.display = "none";
+    }
+  }
+
+  //select 카테고리에 맞는 사진 재배치.
+  currentIdx = 0;
+  setLayout();
+}
+
+/*--------------반응형 슬라이드----------------*/
+const slides = document.querySelector(".slide-wrap");
+const slide_margin = 30;
+const right = document.querySelector(".right");
+const left = document.querySelector(".left");
+let moveWidth = 420;
+
+//resize 될 때마다 크기 조정
+window.onresize = function () {
+  resizeSlider();
+};
+
+function resizeSlider() {
+  if (
+    (window.innerWidth < 1200 && window.innerWidth >= 1000) ||
+    window.innerWidth >= 1200
+  ) {
+    display = 3;
+  } else {
+    display = 2;
+  }
+
+  slidesWidth = slides.offsetWidth - slide_margin * (display - 1);
+  sliderItemWidth = slidesWidth / display;
+  moveWidth = sliderItemWidth + slide_margin;
+
+  let items = document.querySelectorAll(".box-sub");
+  for (var i = 0; i < items.length; i++) {
+    items[i].style.width = sliderItemWidth + "px";
+    items[i].style.height = sliderItemWidth * 1.25 + "px";
+  }
+
+  setLayout();
+}
+
+function setLayout() {
+  for (let j = 0; j < country[index].childElementCount; j++) {
+    country[index].children[j].style.left = (j + currentIdx) * moveWidth + "px";
+    country[index].children[j].classList.remove("transition");
+  }
+}
+
+/*새로고침 했을 때 반응형 반영한 슬라이드 크기 구현&&
+  레이아웃 생성*/
+
+resizeSlider();
+setLayout();
+
+function moveSlide() {
+  for (let l = 0; l < country[index].childElementCount; l++) {
+    country[index].children[l].style.left = (l + currentIdx) * moveWidth + "px";
+    country[index].children[l].classList.add("transition");
+  }
+}
+
+left.addEventListener("click", function () {
+  if (display - country[index].childElementCount !== currentIdx) {
+    currentIdx -= 1;
+    moveSlide();
+  }
+});
+
+right.addEventListener("click", function () {
+  if (currentIdx !== 0) {
+    currentIdx += 1;
+    moveSlide();
+  }
+});
+
+/*
 const slides = document.querySelector(".container");
 let activeLi = slides.getAttribute("data-position");
 const country = document.getElementById("country");
@@ -59,6 +154,7 @@ function selectBox() {
 }
 
 /*------------------------------------------------------------------*/
+/*
 
 const slide = document.querySelectorAll(".container li");
 const right = document.querySelector(".right");
@@ -87,6 +183,7 @@ left.addEventListener("click", function () {
 
 /*------------------------------------------------------*/
 
+/*
 const temp = document.querySelector(".overlayPhoto");
 
 for (let k = 0; k < slideCount; k++) {
@@ -108,3 +205,4 @@ for (let k = 0; k < slideCount; k++) {
     });
   });
 }
+*/
